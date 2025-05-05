@@ -41,7 +41,16 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex-1 md:min-h-[500px] relative animate-float">
-            <PrinterAnimation />
+            <div className="relative">
+              <img 
+                src="https://ideogram.ai/assets/image/lossless/response/hrCbx9msRiOfp5SaeLVyHA" 
+                alt="3D Printing Concept Art" 
+                className="rounded-lg shadow-lg border border-cyber-purple/30 max-w-full h-auto"
+                style={{ maxHeight: '600px', objectFit: 'contain' }}
+              />
+              <div className="absolute inset-0 rounded-lg pointer-events-none border border-cyber-purple/50 shadow-[0_0_15px_rgba(155,135,245,0.3)]"></div>
+              <PrinterAnimation />
+            </div>
           </div>
         </div>
       </div>
