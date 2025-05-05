@@ -18,6 +18,7 @@ const Index = () => {
     <div className="min-h-screen bg-cyber-dark relative overflow-hidden">
       <Helmet>
         <title>3D Print GPT - AI-Powered 3D Printing Assistant</title>
+        <meta name="description" content="AI-powered assistant for 3D printing enthusiasts, engineers, and makers." />
       </Helmet>
       <AnimatedBackground />
       <Navbar />
