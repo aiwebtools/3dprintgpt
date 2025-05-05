@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cyberpunk color theme
+				cyber: {
+					'dark': '#1A1F2C',
+					'darker': '#121620',
+					'black': '#000000',
+					'purple': '#9b87f5',
+					'purple-dark': '#7E69AB',
+					'purple-light': '#B29DFF',
+					'blue': '#1EAEDB',
+					'blue-light': '#40C4F4',
+					'orange': '#F97316',
+					'orange-light': '#FB9650',
+					'neon-glow': '#ffffff80'
 				}
 			},
 			borderRadius: {
@@ -70,25 +85,52 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 15px 0px rgba(155, 135, 245, 0.7)'
 					},
-					to: {
-						height: '0'
+					'50%': { 
+						boxShadow: '0 0 25px 5px rgba(155, 135, 245, 0.9)' 
+					}
+				},
+				'float': {
+					'0%, 100%': { 
+						transform: 'translateY(0px)'
+					},
+					'50%': { 
+						transform: 'translateY(-10px)' 
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						opacity: 1
+					},
+					'50%': {
+						opacity: 0.7
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
+			},
+			boxShadow: {
+				'neon-purple': '0 0 5px 0 rgba(155, 135, 245, 0.3), 0 0 20px 0 rgba(155, 135, 245, 0.2)',
+				'neon-blue': '0 0 5px 0 rgba(30, 174, 219, 0.3), 0 0 20px 0 rgba(30, 174, 219, 0.2)',
+				'neon-orange': '0 0 5px 0 rgba(249, 115, 22, 0.3), 0 0 20px 0 rgba(249, 115, 22, 0.2)',
+			},
+			backgroundImage: {
+				'cyber-grid': "linear-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(155, 135, 245, 0.1) 1px, transparent 1px)",
 			}
 		}
 	},

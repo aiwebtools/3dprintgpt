@@ -1,0 +1,150 @@
+
+import React, { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Logo from './Logo';
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled ? 'bg-cyber-dark/80 backdrop-blur-md shadow-neon-purple' : 'bg-transparent'
+      )}
+    >
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <Logo />
+        
+        {/* Desktop menu */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <a 
+            href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white hover:text-cyber-purple transition-colors"
+          >
+            USE 3D Print GPT
+          </a>
+          <button 
+            onClick={() => scrollToSection('faq')} 
+            className="text-white hover:text-cyber-purple transition-colors"
+          >
+            FAQ
+          </button>
+          <button 
+            onClick={() => scrollToSection('disclaimer')} 
+            className="text-white hover:text-cyber-purple transition-colors"
+          >
+            Disclaimer
+          </button>
+          <a 
+            href="https://www.aiwebtools.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white hover:text-cyber-purple transition-colors"
+          >
+            More AI Tools
+          </a>
+          <Button 
+            asChild
+            className="bg-cyber-purple hover:bg-cyber-purple/90 text-white shadow-neon-purple ml-4"
+          >
+            <a 
+              href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Get Started
+            </a>
+          </Button>
+        </nav>
+
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-cyber-dark/95 backdrop-blur-md">
+          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <a 
+              href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white py-2 hover:text-cyber-purple transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              USE 3D Print GPT
+            </a>
+            <button 
+              onClick={() => scrollToSection('faq')} 
+              className="text-white py-2 text-left hover:text-cyber-purple transition-colors"
+            >
+              FAQ
+            </button>
+            <button 
+              onClick={() => scrollToSection('disclaimer')} 
+              className="text-white py-2 text-left hover:text-cyber-purple transition-colors"
+            >
+              Disclaimer
+            </button>
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white py-2 hover:text-cyber-purple transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              More AI Tools
+            </a>
+            <Button 
+              asChild
+              className="bg-cyber-purple hover:bg-cyber-purple/90 text-white shadow-neon-purple w-full"
+            >
+              <a 
+                href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </a>
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;
