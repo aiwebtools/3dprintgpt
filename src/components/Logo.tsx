@@ -16,10 +16,12 @@ const Logo: React.FC<LogoProps> = ({ className, size = 'md' }) => {
 
   return (
     <div className={cn('flex flex-col items-start', className)}>
-      <h1 className={cn('font-bold text-cyber-purple text-glow', sizes[size])}>
-        3D Print GPT
+      <h1 className={cn('font-bold text-glow relative', sizes[size])}>
+        <span className="text-cyber-purple">3D Print</span>{' '}
+        <span className="text-white">GPT</span>
+        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyber-purple via-cyber-blue to-cyber-purple rounded-full"></span>
       </h1>
-      <div className="text-xs text-gray-400">
+      <div className="text-xs text-gray-400 mt-1">
         Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-purple transition-colors">AiWebTools.AI</a>
       </div>
     </div>

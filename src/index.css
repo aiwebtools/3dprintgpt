@@ -52,7 +52,7 @@
   }
   
   body {
-    @apply bg-cyber-dark text-foreground antialiased;
+    @apply bg-cyber-dark text-foreground antialiased overflow-x-hidden;
     background-image: radial-gradient(circle at center, rgba(155, 135, 245, 0.05) 0%, transparent 80%);
   }
 
@@ -95,6 +95,18 @@
     }
     100% {
       background-position: 300% 0%;
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
   
