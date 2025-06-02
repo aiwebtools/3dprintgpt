@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Disclaimer = () => {
@@ -12,6 +11,11 @@ const Disclaimer = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Important information about the use of 3D Print GPT
           </p>
+          <div className="mt-6 p-4 bg-gradient-to-r from-cyber-purple/20 to-cyber-blue/20 rounded-lg border border-cyber-purple/30 max-w-2xl mx-auto">
+            <p className="text-sm text-gray-300">
+              <strong>Educational Notice:</strong> This service is provided for informational, educational, and research purposes only.
+            </p>
+          </div>
         </div>
         
         <div className="max-w-4xl mx-auto glass-card rounded-lg p-8 border border-cyber-blue/30">
@@ -53,7 +57,7 @@ const Disclaimer = () => {
             
             <h3 className="text-xl font-bold mb-4 text-cyber-blue">Terms of Service & Privacy Policy</h3>
             <p className="mb-4">
-              Use of 3D Print GPT is subject to the <a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:text-cyber-blue-light underline">Terms of Service</a> and <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:text-cyber-blue-light underline">Privacy Policy</a>. By using this service, you acknowledge and agree to these terms.
+              Use of 3D Print GPT is subject to the <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:text-cyber-blue-light underline">Terms of Service</a> and <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:text-cyber-blue-light underline">Privacy Policy</a>. By using this service, you acknowledge and agree to these terms.
             </p>
             
             <p className="mt-8 text-sm text-gray-400">

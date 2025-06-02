@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,7 +66,7 @@ export default {
 				cyber: {
 					'dark': '#1A1F2C',
 					'darker': '#121620',
-					'black': '#000000',
+					'black': '#0B0E14',
 					'purple': '#9b87f5',
 					'purple-dark': '#7E69AB',
 					'purple-light': '#B29DFF',
@@ -75,6 +74,8 @@ export default {
 					'blue-light': '#40C4F4',
 					'orange': '#F97316',
 					'orange-light': '#FB9650',
+					'gold': '#FFD700',
+					'silver': '#C0C0C0',
 					'neon-glow': '#ffffff80'
 				}
 			},
@@ -115,6 +116,52 @@ export default {
 					'50%': {
 						opacity: 0.7
 					}
+				},
+				'divine-pulse': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px 5px rgba(155, 135, 245, 0.4), 0 0 40px 10px rgba(30, 174, 219, 0.2)'
+					},
+					'50%': { 
+						boxShadow: '0 0 40px 15px rgba(155, 135, 245, 0.6), 0 0 80px 20px rgba(30, 174, 219, 0.4)' 
+					}
+				},
+				'ethereal-float': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) translateX(0px) rotate(0deg)'
+					},
+					'33%': { 
+						transform: 'translateY(-15px) translateX(10px) rotate(1deg)' 
+					},
+					'66%': { 
+						transform: 'translateY(-5px) translateX(-8px) rotate(-1deg)' 
+					}
+				},
+				'divine-shimmer': {
+					'0%': { 
+						backgroundPosition: '-200% center' 
+					},
+					'100%': { 
+						backgroundPosition: '200% center' 
+					}
+				},
+				'cosmic-spin': {
+					'0%': { 
+						transform: 'rotate(0deg) scale(1)'
+					},
+					'50%': { 
+						transform: 'rotate(180deg) scale(1.1)'
+					},
+					'100%': { 
+						transform: 'rotate(360deg) scale(1)'
+					}
+				},
+				'holy-glow': {
+					'0%, 100%': {
+						filter: 'brightness(1) drop-shadow(0 0 10px rgba(155, 135, 245, 0.5))'
+					},
+					'50%': {
+						filter: 'brightness(1.3) drop-shadow(0 0 20px rgba(155, 135, 245, 0.8))'
+					}
 				}
 			},
 			animation: {
@@ -122,12 +169,20 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
 				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite'
+				'glow': 'glow 2s ease-in-out infinite',
+				'divine-pulse': 'divine-pulse 4s infinite ease-in-out',
+				'ethereal-float': 'ethereal-float 8s ease-in-out infinite',
+				'divine-shimmer': 'divine-shimmer 3s linear infinite',
+				'cosmic-spin': 'cosmic-spin 12s linear infinite',
+				'holy-glow': 'holy-glow 3s ease-in-out infinite'
 			},
 			boxShadow: {
 				'neon-purple': '0 0 5px 0 rgba(155, 135, 245, 0.3), 0 0 20px 0 rgba(155, 135, 245, 0.2)',
 				'neon-blue': '0 0 5px 0 rgba(30, 174, 219, 0.3), 0 0 20px 0 rgba(30, 174, 219, 0.2)',
 				'neon-orange': '0 0 5px 0 rgba(249, 115, 22, 0.3), 0 0 20px 0 rgba(249, 115, 22, 0.2)',
+				'divine': '0 0 30px 5px rgba(155, 135, 245, 0.3), 0 0 60px 10px rgba(30, 174, 219, 0.2), 0 0 90px 15px rgba(249, 115, 22, 0.1)',
+				'ethereal': '0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 0 40px rgba(155, 135, 245, 0.3)',
+				'cosmic': '0 0 50px rgba(155, 135, 245, 0.4), 0 0 100px rgba(30, 174, 219, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
 			},
 			backgroundImage: {
 				'cyber-grid': "linear-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(155, 135, 245, 0.1) 1px, transparent 1px)",

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
@@ -12,8 +11,18 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-cyber-darker relative">
+    <footer className="bg-cyber-darker relative overflow-hidden">
       <div className="absolute inset-0 bg-cyber-grid bg-[length:40px_40px] opacity-10 z-0"></div>
+      
+      {/* Divine floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 w-2 h-2 bg-cyber-purple rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-20 right-20 w-1 h-1 bg-cyber-blue rounded-full animate-ping opacity-40"></div>
+        <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-cyber-orange rounded-full animate-bounce opacity-50"></div>
+        <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-cyber-purple rounded-full animate-pulse opacity-70"></div>
+        <div className="absolute top-1/3 left-3/4 w-2 h-2 bg-cyber-blue rounded-full animate-ping opacity-30"></div>
+      </div>
+      
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
@@ -80,7 +89,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/disclaimers" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-gray-400 hover:text-cyber-purple transition-colors"
