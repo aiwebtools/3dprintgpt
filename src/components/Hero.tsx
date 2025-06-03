@@ -20,15 +20,17 @@ const Hero = () => {
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white block mb-2">Transform Your Ideas Into</span> 
-              <span className="block text-cyber-purple bg-gradient-to-r from-cyber-purple via-cyber-blue to-cyber-orange bg-clip-text text-transparent animate-divine-shimmer bg-[length:200%_100%]">3D Printable Reality</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-              The ultimate AI assistant for 3D printing enthusiasts, engineers, and makers. 
-              Convert concepts to printable models with expert guidance.
-            </p>
+            <header>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-white block mb-2">Transform Your Ideas Into</span> 
+                <span className="block text-cyber-purple bg-gradient-to-r from-cyber-purple via-cyber-blue to-cyber-orange bg-clip-text text-transparent animate-divine-shimmer bg-[length:200%_100%]">3D Printable Reality</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                The ultimate AI assistant for 3D printing enthusiasts, engineers, and makers. 
+                Convert concepts to printable models with expert guidance, troubleshooting, and optimization.
+              </p>
+            </header>
             
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
               <Button 
@@ -39,6 +41,7 @@ const Hero = () => {
                   href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label="Start using 3D Print GPT AI assistant"
                 >
                   ✨ Start Creating Now ✨
                 </a>
@@ -49,12 +52,12 @@ const Hero = () => {
                 variant="outline" 
                 className="border-2 border-cyber-blue text-cyber-blue hover:text-white hover:bg-gradient-to-r hover:from-cyber-blue/20 hover:to-cyber-purple/20 shadow-ethereal text-lg px-10 py-7 rounded-full font-semibold transition-all duration-500 hover-divine"
               >
-                <a href="#how-it-works">Learn More</a>
+                <a href="#how-it-works" aria-label="Learn more about how 3D Print GPT works">Learn More</a>
               </Button>
             </div>
           </div>
           
-          <div className="flex-1 md:min-h-[600px] relative animate-ethereal-float">
+          <div className="flex-1 md:min-h-[600px] relative animate-ethereal-float" role="img" aria-label="3D printer animation showcasing AI-powered printing capabilities">
             <div className="absolute -inset-8 bg-gradient-to-r from-cyber-purple/20 via-cyber-blue/20 to-cyber-orange/20 rounded-3xl blur-2xl opacity-60 animate-cosmic-spin"></div>
             <PrinterAnimation />
           </div>
