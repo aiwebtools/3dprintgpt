@@ -107,13 +107,18 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-cyber-dark/95 backdrop-blur-md">
+      <div 
+        className={cn(
+          "md:hidden overflow-hidden transition-all duration-200 ease-out",
+          isMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <div className="bg-cyber-dark/95 backdrop-blur-md border-t border-cyber-purple/20">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
             <Button 
               asChild
               variant="ghost" 
-              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-all duration-300 justify-start rounded-lg"
+              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-colors justify-start rounded-lg"
             >
               <a 
                 href="https://chatgpt.com/g/g-681904e586908191a5c9c936a02c1c59-3d-print-gpt" 
@@ -127,21 +132,21 @@ const Navbar = () => {
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('faq')} 
-              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-all duration-300 justify-start rounded-lg"
+              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-colors justify-start rounded-lg"
             >
               FAQ
             </Button>
             <Button 
               variant="ghost" 
               onClick={() => scrollToSection('disclaimer')} 
-              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-all duration-300 justify-start rounded-lg"
+              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-colors justify-start rounded-lg"
             >
               Disclaimer
             </Button>
             <Button 
               asChild
               variant="ghost" 
-              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-all duration-300 justify-start rounded-lg"
+              className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-colors justify-start rounded-lg"
             >
               <a 
                 href="https://aiwebtools.lovable.app/?via=aiwebtools" 
@@ -167,8 +172,7 @@ const Navbar = () => {
             </Button>
           </div>
         </div>
-      )}
-    </header>
+      </div>
   );
 };
 
