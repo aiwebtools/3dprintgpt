@@ -22,7 +22,7 @@ const Logo: React.FC<LogoProps> = ({ className, size = 'md' }) => {
         <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyber-purple via-cyber-blue to-cyber-purple rounded-full"></span>
       </h1>
       <div className="text-xs text-gray-400 mt-1">
-        Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-purple transition-colors">AiWebTools.AI</a>
+        Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-purple transition-colors">AiWebTools.AI</a>
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ const CTA = () => {
               variant="outline" 
               className="border-cyber-blue text-cyber-blue hover:text-cyber-blue-light hover:bg-cyber-blue/10 shadow-neon-blue text-lg px-8 py-6 w-full sm:w-auto"
             >
-              <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer">
                 Explore More AI Tools
               </a>
             </Button>

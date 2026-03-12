@@ -30,7 +30,7 @@ const Index = () => {
     "creator": {
       "@type": "Organization",
       "name": "AI WEB TOOLS LLC",
-      "url": "https://www.aiwebtools.ai"
+      "url": "https://aiwebtools.lovable.app/?via=aiwebtools"
     },
     "keywords": "3D printing, AI assistant, 3D modeling, additive manufacturing, print optimization, troubleshooting, CAD, STL files",
     "featureList": [
