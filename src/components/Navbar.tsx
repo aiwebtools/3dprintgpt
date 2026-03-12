@@ -75,7 +75,7 @@ const Navbar = () => {
             className="text-white hover:bg-cyber-purple/10 hover:text-cyber-purple transition-all duration-300 rounded-full px-5"
           >
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
             >
